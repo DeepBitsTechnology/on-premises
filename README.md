@@ -1,7 +1,3 @@
-Certainly! Here’s an enhanced version of the README file with additional details for a more comprehensive guide:
-
----
-
 # Project Setup
 
 ## Prerequisites
@@ -105,7 +101,3 @@ Certainly! Here’s an enhanced version of the README file with additional detai
     - [Docker Documentation](https://docs.docker.com/)
     - [Docker Compose Documentation](https://docs.docker.com/compose/)
     - [MinIO Documentation](https://docs.min.io/)
-
----
-
-Feel free to modify any details to better fit your specific project requirements!
