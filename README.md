@@ -32,9 +32,13 @@
    docker compose up --build
    ```
 
-   This will build the Docker images and start the containers as defined in your `docker-compose.yml` file.
+   This will build the Docker images and start the containers as defined in your `docker-compose.yml` file. After the first build, you just need to run:
 
-## Restoring the CVE Database
+   ```sh
+   docker compose up
+   ```
+
+   to start the services, and it's much faster.
 
 ## Accessing the System
 
