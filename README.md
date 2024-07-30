@@ -62,21 +62,7 @@
    - Click on the file you just uploaded, then click the "Select to Monitor" button to trigger the first scan.
    - Click the "View" button to see the results.
 
-## Troubleshooting
-
-7. **Common Issues**
-
-   - **Docker Container Not Starting**: Ensure Docker and Docker Compose are correctly installed and updated. Check the logs using:
-
-     ```sh
-     docker-compose logs
-     ```
-
-   - **MinIO Access Issues**: Check the MinIO container logs and verify network configurations.
-
-## Additional Resources
-
-8. **Documentation and Support**
+7. **Documentation and Support**
 
     - [Docker Documentation](https://docs.docker.com/)
     - [MinIO Documentation](https://docs.min.io/)
