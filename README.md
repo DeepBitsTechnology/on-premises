@@ -1,14 +1,34 @@
 # Project Setup
 
 ## Prerequisites
+1. **Install on an local machine**
+   1. **Install Docker Desktop**
 
-1. **Install Docker Desktop**
+      Follow the instructions to install Docker Desktop on your Linux machine: [Docker Desktop Installation](https://docs.docker.com/desktop/install/linux-install/)
 
-   Follow the instructions to install Docker Desktop on your Linux machine: [Docker Desktop Installation](https://docs.docker.com/desktop/install/linux-install/)
+   2. **Enlarge Docker Desktop Resource Limits**
 
-2. **Enlarge Docker Desktop Resource Limits**
+      Ensure Docker Desktop is allocated at least 6GB of memory, 4 CPUs, and 128GB disk space. You can set these resources in Docker Desktop settings under the "Resources" tab.
 
-   Ensure Docker Desktop is allocated at least 6GB of memory, 4 CPUs, and 128GB disk space. You can set these resources in Docker Desktop settings under the "Resources" tab.
+2. **Install on an AWS EC2 Instance**
+
+To deploy on an AWS EC2 instance:
+
+   1. **Create an EC2 Instance**
+      - Select Ubuntu as the OS.
+      - Choose instance type `t2.large`.
+      - Configure storage with 128GB.
+
+   2. **Install Docker and Docker Compose**
+
+      Connect to your instance and run the following commands:
+
+      ```sh
+      sudo apt update
+      sudo apt install docker.io -y
+      sudo curl -L "https://github.com/docker/compose/releases/download/v2.11.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+      sudo chmod +x /usr/local/bin/docker-compose
+      ```
 
 ## Configuration
 
