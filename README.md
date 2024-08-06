@@ -27,12 +27,7 @@
       sudo chmod +x /usr/local/bin/docker-compose
       ```
 
-      ## Setting Up Reverse Proxy Using Caddy
-
-   3. **Install and Configure Caddy**
-
-      To set up a reverse proxy using Caddy on your AWS EC2 instance:
-   
+   3. **Setting Up Reverse Proxy Using Caddy**   
       1. **Install Caddy**
    
          ```sh
