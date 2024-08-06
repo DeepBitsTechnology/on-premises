@@ -97,7 +97,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
 5. **MinIO Configuration**
 
-   Log in to MinIO at [http://localhost:9201](http://localhost:9201) using your username and password from the `.env` file.
+   Log in to MinIO at [http://<your_domain_or_ip>:9201](http://<your_domain_or_ip>:9201) using your username and password from the `.env` file.
 
    - **Create a bucket**: Name it `coogle-dev`.
    - **Generate Access Keys**: Use the Access Key and Secret Key as specified in the `.env` file, or you can create new ones and update the `.env` file accordingly.
@@ -106,7 +106,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
 6. **System Usage**
 
-   Access the system at [http://localhost:8080](http://localhost:8080) to start using it. 
+   Access the system at [http://<your_domain_or_ip>:8080](http://<your_domain_or_ip>:8080) to start using it. 
    You can sign up for an account or use your Google or GitHub account.
    
    - Under the "Projects" tab, click the "Create Project" button to create your first project.
