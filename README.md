@@ -1,6 +1,8 @@
 # Project Setup
 
 ## Prerequisites
+You can choose to install on your local machine or an AWS EC2 instance.
+
 1. **Install on an local machine**
    1. **Install Docker Desktop**
 
@@ -17,9 +19,7 @@
       - Configure storage with 128GB.
 
    2. **Install Docker and Docker Compose**
-
       Connect to your instance and run the following commands:
-
       ```sh
       sudo apt update
       sudo apt install docker.io -y
@@ -29,7 +29,6 @@
 
    3. **Setting Up Reverse Proxy Using Caddy**   
       1. **Install Caddy**
-   
          ```sh
          sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
          curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo tee /etc/apt/trusted.gpg.d/caddy-stable.asc
@@ -39,9 +38,7 @@
          ```
    
       2. **Configure Caddy**
-   
          Create a Caddyfile:
-   
          ```sh
          sudo nano /etc/caddy/Caddyfile
          ```
@@ -57,11 +54,9 @@
              reverse_proxy localhost:9201
          }
          ```
-   
          Replace `<your_domain_or_ip>` with your EC2 instance's public IP or domain.
-   
+
       3. **Reload Caddy Configuration**
-   
          ```sh
          sudo systemctl reload caddy
          ```
