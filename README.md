@@ -11,9 +11,6 @@
       Ensure Docker Desktop is allocated at least 6GB of memory, 4 CPUs, and 128GB disk space. You can set these resources in Docker Desktop settings under the "Resources" tab.
 
 2. **Install on an AWS EC2 Instance**
-
-To deploy on an AWS EC2 instance:
-
    1. **Create an EC2 Instance**
       - Select Ubuntu as the OS.
       - Choose instance type `t2.large`.
