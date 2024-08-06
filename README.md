@@ -27,6 +27,51 @@
       sudo chmod +x /usr/local/bin/docker-compose
       ```
 
+      ## Setting Up Reverse Proxy Using Caddy
+
+   3. **Install and Configure Caddy**
+
+      To set up a reverse proxy using Caddy on your AWS EC2 instance:
+   
+      1. **Install Caddy**
+   
+         ```sh
+         sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+         curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo tee /etc/apt/trusted.gpg.d/caddy-stable.asc
+         curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+         sudo apt update
+         sudo apt install caddy
+         ```
+   
+      2. **Configure Caddy**
+   
+         Create a Caddyfile:
+   
+         ```sh
+         sudo nano /etc/caddy/Caddyfile
+         ```
+   
+         Add the following configuration:
+   
+         ```plaintext
+         http://<your_domain_or_ip> {
+             reverse_proxy localhost:8080
+         }
+   
+         http://<your_domain_or_ip>:9201 {
+             reverse_proxy localhost:9201
+         }
+         ```
+   
+         Replace `<your_domain_or_ip>` with your EC2 instance's public IP or domain.
+   
+      3. **Reload Caddy Configuration**
+   
+         ```sh
+         sudo systemctl reload caddy
+         ```
+
+
 ## Configuration
 
 3. **Modify the `.env` File**
@@ -56,6 +101,8 @@
    ```
 
    to start the services, and it's much faster.
+
+##
 
 ## Accessing the System
 
