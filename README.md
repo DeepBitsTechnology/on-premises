@@ -92,13 +92,13 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
    - Navigate to the project directory and run:
      ```bash
-     docker compose up --build
+     docker-compose up --build
      ```
    - This will build the Docker images and start the containers as defined in your `docker-compose.yml` file.
 
    - After the first build, you can start the services more quickly with:
      ```bash
-     docker compose up
+     docker-compose up
      ```
 
 ## Accessing the System
