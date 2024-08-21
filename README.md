@@ -20,7 +20,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
    - Select Ubuntu as the operating system.
    - Choose the `t2.large` instance type.
-   - Configure storage with 128GB.
+   - Configure storage with 64GB.
    - Set up security groups to allow connections from your network.
 
 #### 2. Install Docker and Docker Compose
