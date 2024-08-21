@@ -12,7 +12,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
 #### 2. Adjust Docker Desktop Resource Limits
 
-   - Ensure Docker Desktop is allocated at least 6GB of memory, 4 CPUs, and 64GB of disk space. These resources can be configured in Docker Desktop settings under the "Resources" tab.
+   - Ensure Docker Desktop is allocated at least 6GB of memory, 4 CPUs, and 128GB of disk space. These resources can be configured in Docker Desktop settings under the "Resources" tab.
 
 ### 2. Install on an AWS EC2 Instance
 
@@ -20,7 +20,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
    - Select Ubuntu as the operating system.
    - Choose the `t2.large` instance type.
-   - Configure storage with 64GB.
+   - Configure storage with 128GB.
    - Set up security groups to allow connections from your network.
 
 #### 2. Install Docker and Docker Compose
