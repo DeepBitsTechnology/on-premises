@@ -65,6 +65,9 @@ You can choose to install on your local machine or an AWS EC2 instance.
      <your_domain_name>:9210 {
          reverse_proxy localhost:9200
      }
+     <your_domain_name>:9211 {
+         reverse_proxy localhost:9201
+     }
      ```
    - Replace `<your_domain_name>` with your EC2 instance's public IP or domain.
 
@@ -105,7 +108,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
 ### 7. MinIO Configuration
 
-   - Log in to MinIO at [http://<your_domain_name>:9201](http://<your_domain_name>:9201) using the username and password from your `.env` file.
+   - Log in to MinIO at [https://<your_domain_name>:9211](https://<your_domain_name>:9211) using the username and password from your `.env` file.
    - Create buckets: `coogle-dev`, `awsecr-image`, `dockerhub-image`, `github-download-bucket`.
    - Generate Access Keys: Use the Access Key and Secret Key specified in the `.env` file, or create new ones and update the `.env` file accordingly.
 
