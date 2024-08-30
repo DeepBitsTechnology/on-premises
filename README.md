@@ -35,7 +35,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
 ### 3. Configure DNS Settings
 
-   - Modify your domain name's DNS settings to point to the public IP of your EC2 instance. If you don't have a domain, you can register a free one through services like [No-IP](https://www.noip.com/).
+   - Modify your domain name's DNS settings to point to the public IP of your EC2 instance. If you don't have a domain, you can register a free one through services like [No-IP](https://www.noip.com/). After registering, send us your domain name so we can add it to our Auth0 whitelist.
 
 ### 4. Set Up a Reverse Proxy Using Caddy
 
