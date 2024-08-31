@@ -2,14 +2,14 @@
 
 ## Prerequisites
 
-#### 1 Create an EC2 Instance
+#### 1. Create an EC2 Instance
 
    - Select Ubuntu as the operating system.
    - Choose the `t2.large` instance type.
    - Configure storage with 128GB.
    - Set up security groups to allow connections from your network.
 
-#### 2 Install Docker and Docker Compose
+#### 2. Install Docker and Docker Compose
 
    - Connect to your instance and run the following commands:
      ```bash
@@ -19,11 +19,11 @@
      sudo chmod +x /usr/local/bin/docker-compose
      ```
 
-#### 3 Configure DNS Settings
+#### 3. Configure DNS Settings
 
    - Modify your domain name's DNS settings to point to the public IP of your EC2 instance. If you don't have a domain, you can register a free one through services like [No-IP](https://www.noip.com/). After registering, send us your domain name so we can add it to our Auth0 whitelist.
 
-#### 4 Set Up a Reverse Proxy Using Caddy
+#### 4. Set Up a Reverse Proxy Using Caddy
 
 ##### 4.1 Install Caddy
 
@@ -64,7 +64,7 @@
      sudo systemctl reload caddy
      ```
 
-#### 5 Modify the `.env` File
+#### 5. Modify the `.env` File
 
    - Update the `.env` file with the following details:
      - **BASE_URL**: The domain name where the system will be hosted.
@@ -73,7 +73,7 @@
 
    - Be sure to change `USERNAME` and `PASSWORD` before your first use.
 
-#### 6 Build and Start the Docker Containers
+#### 6. Build and Start the Docker Containers
 
    - Navigate to the project directory and run:
      ```bash
@@ -85,7 +85,7 @@
      ```bash
      docker-compose up
      ```
-#### 7 MinIO Configuration
+#### 7. MinIO Configuration
 
    - Log in to MinIO at [https://<your_domain_name>:9211](https://<your_domain_name>:9211) using the username and password from your `.env` file.
    - Create buckets: `coogle-dev`, `awsecr-image`, `dockerhub-image`, `github-download-bucket`.
@@ -93,7 +93,7 @@
 
    - For detailed instructions, refer to the [MinIO Documentation](https://docs.min.io/).
 
-#### 8 System Usage
+#### 8. System Usage
 
    - Access the system at [http://<your_domain_name>:8080](http://<your_domain_name>:8080).
    - Sign up for an account or use your Google or GitHub account.
@@ -103,11 +103,11 @@
    - Click on the file you just uploaded, then click "Select to Monitor" to trigger the first scan.
    - Click the "View" button to see the results.
 
-#### 9 Known Issues
+#### 9. Known Issues
 
 - GitHub, Jira, and AWS integrations are currently not supported. Support for these platforms will be released soon.
 
-#### 10 Documentation and Support
+#### 10. Documentation and Support
 
    - [Docker Documentation](https://docs.docker.com/)
    - [MinIO Documentation](https://docs.min.io/)
