@@ -33,13 +33,13 @@ You can choose to install on your local machine or an AWS EC2 instance.
      sudo chmod +x /usr/local/bin/docker-compose
      ```
 
-### 3. Configure DNS Settings
+#### 3. Configure DNS Settings
 
    - Modify your domain name's DNS settings to point to the public IP of your EC2 instance. If you don't have a domain, you can register a free one through services like [No-IP](https://www.noip.com/). After registering, send us your domain name so we can add it to our Auth0 whitelist.
 
-### 4. Set Up a Reverse Proxy Using Caddy
+#### 4. Set Up a Reverse Proxy Using Caddy
 
-#### 1. Install Caddy
+##### 1. Install Caddy
 
    - Run the following commands:
      ```bash
@@ -47,7 +47,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
      sudo apt install caddy
      ```
 
-#### 2. Configure Caddy
+##### 2. Configure Caddy
 
    - Create a `Caddyfile`:
      ```bash
@@ -71,16 +71,16 @@ You can choose to install on your local machine or an AWS EC2 instance.
      ```
    - Replace `<your_domain_name>` with your EC2 instance's public IP or domain.
 
-#### 3. Reload Caddy Configuration
+##### 3. Reload Caddy Configuration
 
    - Run the following command:
      ```bash
      sudo systemctl reload caddy
      ```
 
-## Configuration
+### Configuration
 
-### 5. Modify the `.env` File
+#### 5. Modify the `.env` File
 
    - Update the `.env` file with the following details:
      - **BASE_URL**: The domain name where the system will be hosted.
@@ -89,9 +89,9 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
    - Be sure to change `USERNAME` and `PASSWORD` before your first use.
 
-## Building and Running the Project
+### Building and Running the Project
 
-### 6. Build and Start the Docker Containers
+#### 6. Build and Start the Docker Containers
 
    - Navigate to the project directory and run:
      ```bash
@@ -104,9 +104,9 @@ You can choose to install on your local machine or an AWS EC2 instance.
      docker-compose up
      ```
 
-## Accessing the System
+### Accessing the System
 
-### 7. MinIO Configuration
+#### 7. MinIO Configuration
 
    - Log in to MinIO at [https://<your_domain_name>:9211](https://<your_domain_name>:9211) using the username and password from your `.env` file.
    - Create buckets: `coogle-dev`, `awsecr-image`, `dockerhub-image`, `github-download-bucket`.
@@ -114,7 +114,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
    - For detailed instructions, refer to the [MinIO Documentation](https://docs.min.io/).
 
-### 8. System Usage
+#### 8. System Usage
 
    - Access the system at [http://<your_domain_name>:8080](http://<your_domain_name>:8080).
    - Sign up for an account or use your Google or GitHub account.
@@ -124,11 +124,11 @@ You can choose to install on your local machine or an AWS EC2 instance.
    - Click on the file you just uploaded, then click "Select to Monitor" to trigger the first scan.
    - Click the "View" button to see the results.
 
-### 9. Known Issues
+#### 9. Known Issues
 
 - GitHub, Jira, and AWS integrations are currently not supported. Support for these platforms will be released soon.
 
-### 10. Documentation and Support
+#### 10. Documentation and Support
 
    - [Docker Documentation](https://docs.docker.com/)
    - [MinIO Documentation](https://docs.min.io/)
