@@ -124,7 +124,11 @@ You can choose to install on your local machine or an AWS EC2 instance.
    - Click on the file you just uploaded, then click "Select to Monitor" to trigger the first scan.
    - Click the "View" button to see the results.
 
-### 9. Documentation and Support
+### 9. Known Issues
+
+- GitHub, Jira, and AWS integrations are currently not supported. Support for these platforms will be released soon.
+
+### 10. Documentation and Support
 
    - [Docker Documentation](https://docs.docker.com/)
    - [MinIO Documentation](https://docs.min.io/)
