@@ -69,12 +69,12 @@
 ### 6. Build and Start the Docker Containers
    - Navigate to the project directory and run:
      ```bash
-     docker-compose up --build
+     docker-compose up --build -d
      ```
    - This will build the Docker images and start the containers as defined in your `docker-compose.yml` file.
    - After the first build, you can start the services more quickly with:
      ```bash
-     docker-compose up
+     docker-compose up -d
      ```
 
 ### 7. MinIO Configuration
