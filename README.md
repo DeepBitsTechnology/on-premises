@@ -2,28 +2,14 @@
 
 ## Prerequisites
 
-You can choose to install on your local machine or an AWS EC2 instance.
-
-### 1. Install on a Local Machine
-
-#### 1.1 Install Docker Desktop
-
-   - Follow the instructions to install Docker Desktop on your Linux machine: [Docker Desktop Installation](https://docs.docker.com/desktop/install/linux-install/).
-
-#### 1.2 Adjust Docker Desktop Resource Limits
-
-   - Ensure Docker Desktop is allocated at least 6GB of memory, 4 CPUs, and 128GB of disk space. These resources can be configured in Docker Desktop settings under the "Resources" tab.
-
-### 2. Install on an AWS EC2 Instance
-
-#### 2.1 Create an EC2 Instance
+#### 1 Create an EC2 Instance
 
    - Select Ubuntu as the operating system.
    - Choose the `t2.large` instance type.
    - Configure storage with 128GB.
    - Set up security groups to allow connections from your network.
 
-#### 2.2 Install Docker and Docker Compose
+#### 2 Install Docker and Docker Compose
 
    - Connect to your instance and run the following commands:
      ```bash
@@ -33,13 +19,13 @@ You can choose to install on your local machine or an AWS EC2 instance.
      sudo chmod +x /usr/local/bin/docker-compose
      ```
 
-#### 2.3 Configure DNS Settings
+#### 3 Configure DNS Settings
 
    - Modify your domain name's DNS settings to point to the public IP of your EC2 instance. If you don't have a domain, you can register a free one through services like [No-IP](https://www.noip.com/). After registering, send us your domain name so we can add it to our Auth0 whitelist.
 
-#### 2.4 Set Up a Reverse Proxy Using Caddy
+#### 4 Set Up a Reverse Proxy Using Caddy
 
-##### 2.4.1 Install Caddy
+##### 4.1 Install Caddy
 
    - Run the following commands:
      ```bash
@@ -47,7 +33,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
      sudo apt install caddy
      ```
 
-##### 2.4.2 Configure Caddy
+##### 4.2 Configure Caddy
 
    - Create a `Caddyfile`:
      ```bash
@@ -71,14 +57,14 @@ You can choose to install on your local machine or an AWS EC2 instance.
      ```
    - Replace `<your_domain_name>` with your EC2 instance's public IP or domain.
 
-##### 2.4.3 Reload Caddy Configuration
+##### 4.3 Reload Caddy Configuration
 
    - Run the following command:
      ```bash
      sudo systemctl reload caddy
      ```
 
-#### 2.5 Modify the `.env` File
+#### 5 Modify the `.env` File
 
    - Update the `.env` file with the following details:
      - **BASE_URL**: The domain name where the system will be hosted.
@@ -87,7 +73,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
    - Be sure to change `USERNAME` and `PASSWORD` before your first use.
 
-#### 2.6 Build and Start the Docker Containers
+#### 6 Build and Start the Docker Containers
 
    - Navigate to the project directory and run:
      ```bash
@@ -99,7 +85,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
      ```bash
      docker-compose up
      ```
-#### 2.7 MinIO Configuration
+#### 7 MinIO Configuration
 
    - Log in to MinIO at [https://<your_domain_name>:9211](https://<your_domain_name>:9211) using the username and password from your `.env` file.
    - Create buckets: `coogle-dev`, `awsecr-image`, `dockerhub-image`, `github-download-bucket`.
@@ -107,7 +93,7 @@ You can choose to install on your local machine or an AWS EC2 instance.
 
    - For detailed instructions, refer to the [MinIO Documentation](https://docs.min.io/).
 
-#### 2.8 System Usage
+#### 8 System Usage
 
    - Access the system at [http://<your_domain_name>:8080](http://<your_domain_name>:8080).
    - Sign up for an account or use your Google or GitHub account.
@@ -117,11 +103,11 @@ You can choose to install on your local machine or an AWS EC2 instance.
    - Click on the file you just uploaded, then click "Select to Monitor" to trigger the first scan.
    - Click the "View" button to see the results.
 
-#### 2.9 Known Issues
+#### 9 Known Issues
 
 - GitHub, Jira, and AWS integrations are currently not supported. Support for these platforms will be released soon.
 
-#### 2.10 Documentation and Support
+#### 10 Documentation and Support
 
    - [Docker Documentation](https://docs.docker.com/)
    - [MinIO Documentation](https://docs.min.io/)
