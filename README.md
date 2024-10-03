@@ -26,15 +26,15 @@
 
 #### 4.1 Install Certbot:
     - Certbot is the most popular Let's Encrypt client. On Ubuntu, you can install it using:
-    ```bash
-    sudo apt-get update
-    sudo apt-get install certbot
-    ```
+       ```bash
+       sudo apt-get update
+       sudo apt-get install certbot
+       ```
 
 #### 4.2 Obtain a Certificate:
-    ```bash
-    sudo certbot certonly --standalone -d yourdomain.com
-    ```
+       ```bash
+       sudo certbot certonly --standalone -d yourdomain.com
+       ```
     Replace "yourdomain.com" with your actual domain name. You'll need to temporarily stop your web server for this step.
 
 ### 5. Modify the `.env` File
