@@ -35,7 +35,7 @@
   ```bash
   sudo certbot certonly --standalone -d yourdomain.com
   ```
-  Replace "yourdomain.com" with your actual domain name. Once the certificate is generated, copy the privkey.pem and fullchain.pem files to the ./certs/ directory.
+  Replace "yourdomain.com" with your actual domain name. Once the certificate is generated, copy the `privkey.pem` and `fullchain.pem` files to the `./certs/` directory.
 
 ### 5. Modify the `.env` File
     - Update the `.env` file with the following details:
