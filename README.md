@@ -22,7 +22,9 @@
    - If you don't have a domain, you can register a free one through services like [No-IP](https://www.noip.com/).
    - After registering, send us your domain name so we can add it to our Auth0 whitelist.
 
-### 4. Use Let's Encrypt to Create and Install HTTPS Certificates:
+### 4. Configure SSL/TLS certificates
+   - Copy your domain’s certificates to the ./certs/ directory, renaming them to privkey.pem and fullchain.pem if necessary.
+   - If you do not have certificates for your domain, you can use Let’s Encrypt to create and install SSL/TLS certificates.
 
 #### 4.1 Install Certbot:
    - Certbot is the most popular Let's Encrypt client. On Ubuntu, you can install it using:
