@@ -59,7 +59,7 @@
 ### 7. MinIO Configuration
    - Log in to MinIO at [https://<your_domain_name>:9211](https://<your_domain_name>:9211) using the username and password from your `.env` file.
    - Create the following buckets: `coogle-dev`, `awsecr-image`, `dockerhub-image`, `github-download-bucket`.
-   - Generate Access Keys: Use the Access Key and Secret Key specified in the `.env` file, or create new ones and update the `.env` file accordingly.
+   - Generate Access Keys: Create a new Access Key and update the `.env` file accordingly.
    - For detailed instructions, refer to the [MinIO Documentation](https://docs.min.io/).
 
 ### 8. System Usage
