@@ -40,10 +40,10 @@
   Replace "yourdomain.com" with your actual domain name. Once the certificate is generated, copy the `privkey.pem` and `fullchain.pem` files to the `./certs/` directory.
 
 ### 5. Modify the `.env` File
-    - Update the `.env` file with the following details:
-      - **BASE_URL**: The domain name where the system will be hosted.
-      - **USERNAME**: The username for accessing the system.
-      - **PASSWORD**: The password for accessing the system.
+   - Update the `.env` file with the following details:
+     - BASE_URL: The domain name where the system will be hosted.
+     - USERNAME: The username for accessing the system.
+     - PASSWORD: The password for accessing the system.
 
 ### 6. Build and Start the Docker Containers
    - Navigate to the project directory and run:
