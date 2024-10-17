@@ -4,7 +4,7 @@
 
 ### 1. Create an EC2 Instance
    - **Operating System:** Select Ubuntu.
-   - **Instance Type:** Choose the `t2.large` instance type.
+   - **Instance Type:** Choose the `t3.xlarge` or better instance type.
    - **Storage:** Configure with 128GB.
    - **Security Groups:** Set up to allow connections from your network.
 
