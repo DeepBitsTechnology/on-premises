@@ -20,7 +20,7 @@
 ### 3. Configure DNS Settings
    - Modify your domain name's DNS settings to point to the public IP of your EC2 instance.
    - If you don't have a domain, you can register a free one through services like [No-IP](https://www.noip.com/).
-   - After registering, send us your domain name so we can add it to our Auth0 whitelist.
+   - After registering, send us your domain name so we can add it to our Auth0 whitelist, and create Github app and Jira app for you if you need Github and Jira integration.
 
 ### 4. Configure SSL/TLS certificates
    - Copy your domain’s certificates to the ./certs/ directory, renaming them to privkey.pem and fullchain.pem if necessary.
@@ -59,10 +59,14 @@
 ### 7. MinIO Configuration
    - Log in to MinIO at [https://<your_domain_name>:9211](https://<your_domain_name>:9211) using the username and password from your `.env` file.
    - Create the following buckets: `coogle-dev`, `awsecr-image`, `dockerhub-image`, `github-download-bucket`.
-   - Create a new Access Key and update the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` fields in the `.env` file accordingly.
+   - Create a new Access Key and update the `MINIO_ACCESS_KEY_ID` and `MINIO_SECRET_ACCESS_KEY` fields in the `.env` file accordingly.
    - For detailed instructions, refer to the [MinIO Documentation](https://docs.min.io/).
 
-### 8. System Usage
+### 8. AWS Configuration
+   - Create a new Access Key and update the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` fields in the `.env` file accordingly.
+   - For detailed instructions, refer to the [MinIO Documentation](https://docs.min.io/).
+   - 
+### 9. System Usage
    - Access the system at [http://<your_domain_name>:8080](http://<your_domain_name>:8080).
    - Sign up for an account or use your Google or GitHub account.
    - Under the "Projects" tab, click "Create Project" to create your first project.
@@ -70,9 +74,6 @@
    - After uploading, ensure the new file is selected, then click "Save."
    - Click on the file you just uploaded, then click "Select to Monitor" to trigger the first scan.
    - Click the "View" button to see the results.
-
-### 9. Known Issues
-   - GitHub, Jira, and AWS integrations are currently not supported. Support for these platforms will be released soon.
 
 ### 10. Documentation and Support
    - [Docker Documentation](https://docs.docker.com/)
