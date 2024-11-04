@@ -63,12 +63,12 @@
    - For detailed instructions, refer to the [MinIO Documentation](https://docs.min.io/).
 
 ### 8. AWS Configuration (optional, if you need AWS ECR integration)
-	- Log in to your AWS Console, and go to IAM.
-	- Select Users (or create a new one) and go to the Security credentials tab.
-	- Create access key under Access keys.
+   - Log in to your AWS Console, and go to IAM.
+   - Select Users (or create a new one) and go to the Security credentials tab.
+   - Create access key under Access keys.
    - Update the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` fields in the `.env` file accordingly.
    - For detailed instructions, refer to the [AWS Documentation](https://docs.aws.amazon.com/keyspaces/latest/devguide/access.credentials.html).
-   - 
+
 ### 9. System Usage
    - Access the system at [http://<your_domain_name>:8080](http://<your_domain_name>:8080).
    - Sign up for an account or use your Google or GitHub account.
