@@ -81,4 +81,3 @@
 ### 10. Documentation and Support
    - [Docker Documentation](https://docs.docker.com/)
    - [Certbot Documentation](https://certbot.eff.org/)
-   - [MinIO Documentation](https://docs.min.io/)
